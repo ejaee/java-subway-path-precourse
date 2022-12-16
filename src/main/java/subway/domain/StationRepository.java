@@ -23,4 +23,13 @@ public class StationRepository {
     public static void deleteAll() {
         stations.clear();
     }
+
+    public static Station getStation(String findStation) {
+        for (Station station : stations) {
+            if (station.getName().equals(findStation)) {
+                return station;
+            }
+        }
+        throw new IllegalArgumentException("station 을 찾을 수 없습니다");
+    }
 }

@@ -19,7 +19,6 @@ public class JGraphtTest {
         graph.setEdgeWeight(graph.addEdge("v1", "v2"), 2);
         graph.setEdgeWeight(graph.addEdge("v2", "v3"), 2);
         graph.setEdgeWeight(graph.addEdge("v1", "v3"), 100);
-
         DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(graph);
         List<String> shortestPath = dijkstraShortestPath.getPath("v3", "v1").getVertexList();
 
